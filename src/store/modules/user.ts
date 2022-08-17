@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import { useEthers, displayEther, shortenAddress } from 'vue-dapp';
-import erc721Abi from '../../abi/Erc721.json';
+import MinterAbi from "../../abi/Minter.json";
 
 const { address, balance, chainId, signer } = useEthers();
 
@@ -233,17 +233,15 @@ export default {
       }
     },
 
-    async fetchCanUserBuy({ commit, state }) {
+    async fetchCanUserBuy({ commit, rootGetters }) {
       if (address.value) {
         // fetch if user can buy a domain
-        const intfc = new ethers.utils.Interface(erc721Abi);
-        const contract = new ethers.Contract(state.nftAddress, intfc, signer.value);
+        const minterIntfc = new ethers.utils.Interface(MinterAbi);
+        const minterContract = new ethers.Contract(rootGetters["tld/getMinterAddress"], minterIntfc, signer.value);
 
-        const balance = await contract.balanceOf(address.value);
+        const canMint = await minterContract.canUserMint(address.value);
 
-        if (Number(balance) > 0) {
-          commit("setCanUserBuy", true);
-        }
+        commit("setCanUserBuy", canMint);
       }
     },
 

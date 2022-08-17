@@ -31,7 +31,7 @@
 
     <div class="text-align-header">
       <p class="mt-5 price-text">
-          Domain price: {{getMinterTldPrice}} {{getPaymentTokenName}}
+          Domain price: {{getPrice}} {{getPaymentTokenName}}
       </p>
     </div>
 
@@ -46,7 +46,7 @@
       class="btn btn-primary btn-lg mt-3 buy-button" 
       :disabled="waiting || buyNotValid(chosenDomainName).invalid || !hasUserEnoughTokens"
     >
-      <span>Not TWB NFT holder</span>
+      <span>You need to own all three Dishes NFTs</span>
     </button>
 
     <!-- Too low ETH balance -->
@@ -74,6 +74,41 @@
 
     <div v-if="isActivated && !isNetworkSupported" class="mt-4">
       <button class="btn btn-primary btn-lg btn-Disconnected" @click="changeNetwork(this.getTldChainName)">Switch to {{getTldChainName}}</button>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Domain length</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 character</td>
+              <td>{{getMinterTldPrice1}} {{getPaymentTokenName}}</td>
+            </tr>
+            <tr>
+              <td>2 characters</td>
+              <td>{{getMinterTldPrice2}} {{getPaymentTokenName}}</td>
+            </tr>
+            <tr>
+              <td>3 characters</td>
+              <td>{{getMinterTldPrice3}} {{getPaymentTokenName}}</td>
+            </tr>
+            <tr>
+              <td>4 characters</td>
+              <td>{{getMinterTldPrice4}} {{getPaymentTokenName}}</td>
+            </tr>
+            <tr>
+              <td>5+ characters</td>
+              <td>{{getMinterTldPrice5}} {{getPaymentTokenName}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     
   </div>
@@ -114,15 +149,31 @@ export default {
   computed: {
     ...mapGetters("user", ["getPaymentTokenAddress", "getPaymentTokenName", "getPaymentTokenAllowance", "getUserBalance", "getCanUserBuy", "getDiscountEligible"]),
     ...mapGetters("network", ["getBlockExplorerBaseUrl"]),
-    ...mapGetters("tld", ["getTldChainId", "getTldChainName", "getMinterAddress", "getTldContract", "getMinterTldPrice", "getMinterPaused", "getMinterDiscountPercentage", "getTldName"]),
+    ...mapGetters("tld", ["getTldChainId", "getTldChainName", "getMinterAddress", "getTldContract", "getMinterTldPrice1", "getMinterTldPrice2", "getMinterTldPrice3", "getMinterTldPrice4", "getMinterTldPrice5", "getMinterPaused", "getMinterDiscountPercentage", "getTldName"]),
+
+    getPrice() {
+      if (this.chosenDomainName) {
+        if (this.chosenDomainName.length === 1) {
+          return this.getMinterTldPrice1;
+        } else if (this.chosenDomainName.length === 2) {
+          return this.getMinterTldPrice2;
+        } else if (this.chosenDomainName.length === 3) {
+          return this.getMinterTldPrice3;
+        } else if (this.chosenDomainName.length === 4) {
+          return this.getMinterTldPrice4;
+        }
+      }
+      
+      return this.getMinterTldPrice5;
+    },
 
     domainLowerCase() {
       return this.chosenDomainName.toLowerCase();
     },
 
     hasUserEnoughTokens() {
-      if (this.address && Number(this.getMinterTldPrice) > 0 && Number(this.getUserBalance) > 0) {
-        if (Number(this.getUserBalance) >= Number(this.getMinterTldPrice)) {
+      if (this.address && Number(this.getUserBalance) > 0) {
+        if (Number(this.getUserBalance) >= Number(this.getPrice)) {
           return true;
         }
       }
@@ -174,7 +225,7 @@ export default {
           this.address,
           referral,
           {
-            value: ethers.utils.parseEther(this.getMinterTldPrice)
+            value: ethers.utils.parseEther(this.getPrice)
           }
         );
 
