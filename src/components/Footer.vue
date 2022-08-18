@@ -4,7 +4,7 @@
     
     <span v-if="isActivated && isNetworkSupported"> | </span>
 
-    <!--<router-link to="/about">About</router-link><span> | </span>-->
+    <router-link to="/about">About</router-link><span> | </span>
 
     <a target="_blank" href="https://punk.domains">Powered by Punk Domains</a>
   </div>

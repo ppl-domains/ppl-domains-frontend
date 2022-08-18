@@ -60,7 +60,7 @@ export default {
 
   data() {
     return {
-      flipSide: "front", // front-custom, back-punk
+      flipSide: "back", // front-custom, back-punk
     }
   },
 

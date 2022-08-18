@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <h1 class="text-center">About .wildbunch Domains</h1>
+  <h1 class="text-center">About .ppl domains</h1>
   
   <div class="row mt-3">
     <div class="col-md-8 offset-md-2">
@@ -11,9 +11,9 @@
 
       <ul>
         <li><a target="_blank" href="https://docs.punk.domains">Docs</a></li>
-        <li><a target="_blank" href="https://github.com/thewildbunchio">Github</a></li>
-        <li><a target="_blank" href="https://discord.gg/thewildbunch">Discord</a></li>
-        <li><a target="_blank" href="https://twitter.com/TheWildBunchNFT">Twitter</a></li>
+        <li><a target="_blank" href="https://github.com/ppl-domains">Github</a></li>
+        <li><a target="_blank" href="https://discord.gg/CBQFAkP3Fb">Discord</a></li>
+        <li><a target="_blank" href="https://twitter.com/joiedegarlic">Twitter</a></li>
       </ul>
 
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="container text-center">
-    <img class="img-fluid main-img rounded" src="../assets/ppl-logo.png" />
+    <img class="img-fluid main-img rounded" src="../assets/logo-black.svg" />
 
     <div class="text-align-header mt-3">
       <h1>Mint your {{getTldName}} domain!</h1>
@@ -77,9 +77,9 @@
     </div>
 
     <div class="row mt-5">
-      <div class="col-md-6 offset-md-3">
-        <table class="table table-bordered">
-          <thead>
+      <div class="col-md-6 offset-md-3 table-container">
+        <table class="table table-borderless table-ppl">
+          <thead class="table-dark">
             <tr>
               <th scope="col">Domain length</th>
               <th scope="col">Price</th>
@@ -326,6 +326,26 @@ export default {
 
 .main-img {
   width: 10em;
+}
+
+th:first-of-type {
+  border-top-left-radius: 10px;
+  border-collapse: separate;
+}
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
+
+.table-ppl {
+  border: 2px solid black;
+  border-radius: 10px !important;
+  border-collapse: separate;
 }
 
 .tld-addon {
