@@ -10,16 +10,15 @@ export default {
     networkCurrency: "ETH",
     networkName: "Unsupported Network",
     supportedNetworks: {
-      42161: "Arbitrum",
-      80001: "Polygon Testnet"
+      42161: "Arbitrum"
     }
   }),
 
   getters: { 
     getBlockExplorerBaseUrl() {
       // TODO
-      return "https://mumbai.polygonscan.com/";
-      //return "https://arbiscan.io";
+      //return "https://mumbai.polygonscan.com/";
+      return "https://arbiscan.io";
     },
     
     getChainId() {
@@ -70,8 +69,8 @@ export default {
   mutations: { 
     setNetworkData(state) {
       // TODO
-      state.networkName = "Polygon Testnet";
-      state.networkCurrency = "MATIC";
+      state.networkName = "Arbitrum";
+      state.networkCurrency = "ETH";
     }
   },
 

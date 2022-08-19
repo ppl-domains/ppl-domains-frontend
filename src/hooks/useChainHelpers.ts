@@ -5,8 +5,6 @@ export default function useChainHelpers() {
   function getChainName(chainId) {
     if (chainId === 1) {
       return "Ethereum";
-    } else if (chainId === 137) {
-      return "Polygon";
     } else if (chainId === 10) {
       return "Optimism";
     } else if (chainId === 69) {
@@ -61,8 +59,8 @@ export default function useChainHelpers() {
       } else if (networkId === 42161) {
         // Arbitrum
         urls = [
+          "https://arb1.arbitrum.io/rpc",
           "https://arb-mainnet.g.alchemy.com/v2/" + import.meta.env.VITE_ALCHEMY_ARBITRUM_KEY,
-          "https://arb1.arbitrum.io/rpc"
         ];
       } else if (networkId === 421611) {
         // Arbitrum testnet

@@ -10,12 +10,12 @@ export default {
   
   state: () => ({ 
     discountPercentage: 0,
-    tldName: ".testppl",
-    tldAddress: "0x17C212067f11BDFCb975A77b3fff56Dff8d2cd57", // TODO
+    tldName: ".ppl",
+    tldAddress: "0xbC9d19e5f97a572f428F7292DBf3dc182Cc05C82", // TODO
     tldContract: null,
-    tldChainId: 80001,
-    tldChainName: "Polygon Testnet",
-    minterAddress: "0x9bcd5d7f4B9Fc949635124b20c83C15AA56640Fd", // TODO
+    tldChainId: 42161,
+    tldChainName: "Arbitrum",
+    minterAddress: "0x64427BE4497E473ce0f529Ec07C91cc5CDB1ffc4", // TODO
     minterContract: null,
     minterPaused: true,
     minterTldPrice1: 1.0,
