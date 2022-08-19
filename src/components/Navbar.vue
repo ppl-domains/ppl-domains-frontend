@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand">
         <img src="../assets/logo-black.svg" alt="" width="30" class="d-inline-block align-bottom navbar-img">
-        .ppl domains
+        People Domains
       </router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,11 +133,9 @@ export default {
   color: #1c1b1b;
 }
 .navbar-light {
-  /*background: linear-gradient(90deg, hsla(265, 75%, 26%, 1) 0%, hsla(365, 75%, 26%, 1) 100%);*/
-  /*background: linear-gradient(90deg, hsla(250, 74%, 45%, 1) 0%, hsla(267, 56%, 50%, 1) 100%);*/
-  /*background: linear-gradient(90deg, #3b1eca 0%, #793ac7 100%);*/
   border-radius: 0px 0px 10px 10px;
-  background: #fff;
+  /*background: linear-gradient(30deg, #C71585 30%, #c111c3 100%);*/
+  background: transparent;
   padding: 20px;
   
 }

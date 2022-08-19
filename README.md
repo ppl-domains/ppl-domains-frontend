@@ -1,4 +1,4 @@
-# .ppl domains frontend
+# People Domains frontend
 
 Frontend for .ppl domain service powered by the [Punk Domains protocol](https://punk.domains).
 

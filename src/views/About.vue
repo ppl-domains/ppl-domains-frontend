@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <h1 class="text-center">About .ppl domains</h1>
+  <h1 class="text-center">About People Domains</h1>
   
   <div class="row mt-3">
     <div class="col-md-8 offset-md-2">
