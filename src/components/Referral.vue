@@ -59,6 +59,7 @@ export default {
 
 <style scoped>
 .clipboard {
-  cursor: pointer
+  cursor: pointer;
+  color: #C71585;
 }
 </style>

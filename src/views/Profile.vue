@@ -79,7 +79,7 @@
         <div class="modal-body">
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Enter your existing domain:</label>
-            <input type="text" placeholder="Enter .ppl domain" class="form-control border-2 border-dark" id="recipient-name" v-model="existingDomain">
+            <input type="text" placeholder="Enter .ppl domain" class="form-control border-2" id="recipient-name" v-model="existingDomain">
             <small><em>No transaction will be made, this is a free query.</em></small>
           </div>
         </div>
@@ -200,8 +200,8 @@ export default {
 
 .table {
   --bs-table-bg: transparent;
-  color: #000;
-  border-color: #000;
+  color: #fff;
+  border-color: #fff;
 }
 
 .table:hover {

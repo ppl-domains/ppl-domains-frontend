@@ -1,6 +1,6 @@
 <template>
   <div class="container text-center">
-    <img class="img-fluid main-img rounded" src="../assets/logo-black.svg" />
+    <img class="img-fluid main-img rounded" src="../assets/logo-white.svg" />
 
     <div class="text-align-header mt-3">
       <h1>Mint your {{getTldName}} domain!</h1>
@@ -12,13 +12,13 @@
           v-model="chosenDomainName" 
           placeholder="enter domain name"
           type="text" 
-          class="form-control text-end border-2 border-end-0 border-dark"
+          class="form-control text-end border-2 border-end-0 border-light"
           aria-label="Text input with dropdown button"
         >
 
-        <span class="input-group-text tld-addon border-2 border-dark">
+        <span class="input-group-text tld-addon border-2 border-light">
           <span v-if="loading" class="spinner-border spinner-border-sm mx-1" role="status" aria-hidden="true"></span>
-          <span style="color:#1B0D23;">{{getTldName}}</span>
+          <span>{{getTldName}}</span>
         </span>
       </div>
     </div>
@@ -79,7 +79,7 @@
     <div class="row mt-5">
       <div class="col-md-6 offset-md-3 table-container">
         <table class="table table-borderless table-ppl">
-          <thead class="table-dark">
+          <thead class="table-light">
             <tr>
               <th scope="col">Domain length</th>
               <th scope="col">Price</th>
@@ -316,6 +316,15 @@ export default {
   width: 50%;
 }
 
+.domain-input > input {
+  color: #C71585;
+}
+
+.domain-input > input::placeholder {
+  color: #C71585;
+  opacity: 0.7;
+}
+
 .domain-input-container {
   margin-top: 30px;
 }
@@ -342,14 +351,20 @@ tr:last-of-type td:last-of-type {
   border-bottom-right-radius: 10px;
 }
 
+.table-light {
+  color: #C71585;
+}
+
 .table-ppl {
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 10px !important;
   border-collapse: separate;
+  color: white;
 }
 
 .tld-addon {
   background-color: white;
+  color:#C71585;
 }
 
 @media only screen and (max-width: 767px) {

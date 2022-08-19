@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand">
-        <img src="../assets/logo-black.svg" alt="" width="30" class="d-inline-block align-bottom navbar-img">
+        <img src="../assets/logo-white.svg" alt="" width="30" class="d-inline-block align-bottom navbar-img">
         People Domains
       </router-link>
 
@@ -129,10 +129,10 @@ export default {
 .navbar-brand {
   font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 }
-.navbar-light .navbar-brand {
-  color: #1c1b1b;
+.navbar-dark .navbar-brand {
+  /*color: #fff;*/
 }
-.navbar-light {
+.navbar-dark {
   border-radius: 0px 0px 10px 10px;
   /*background: linear-gradient(30deg, #C71585 30%, #c111c3 100%);*/
   background: transparent;

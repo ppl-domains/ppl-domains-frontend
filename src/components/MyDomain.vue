@@ -167,7 +167,7 @@ export default {
 
 <style scoped>
 .text-click:hover {
-  color: black;
+  color: white;
   text-decoration: underline;
   cursor: pointer;
 }
