@@ -23,6 +23,8 @@
                 <li class="dropdown-item" @click="openUrl('https://stratosnft.io/collection/dish')">Dishes #1</li>
                 <li class="dropdown-item" @click="openUrl('https://stratosnft.io/collection/dish2')">Dishes #2</li>
                 <li class="dropdown-item" @click="openUrl('https://stratosnft.io/collection/dish3')">Dishes #3</li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-item" @click="openUrl('https://stratosnft.io/collection/people-domains')">.ppl domains</li>
               </ul>
             </div>
 
