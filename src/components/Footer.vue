@@ -6,6 +6,9 @@
 
     <router-link to="/about">About</router-link><span> | </span>
 
+    <router-link v-if="isUserMinterAdmin || isUserRoyaltyFeeUpdater || isUserTldAdmin" to="/admin">Admin</router-link>
+    <span v-if="isUserMinterAdmin || isUserRoyaltyFeeUpdater || isUserTldAdmin"> | </span>
+
     <a target="_blank" href="https://punk.domains">Powered by Punk Domains</a>
   </div>
 
@@ -31,6 +34,7 @@ export default {
 
   computed: {
     ...mapGetters("network", ["isNetworkSupported"]),
+    ...mapGetters("user", ["isUserMinterAdmin", "isUserTldAdmin", "isUserRoyaltyFeeUpdater"]),
     
   },
 
