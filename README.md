@@ -21,7 +21,7 @@ If you don't create the .env file with that variable, the web app will not prope
 
 ## tokens.json
 
-Add the correct
+Add the correct tokens (for the Send Tokens page).
 
 ## Branches & deployment
 
