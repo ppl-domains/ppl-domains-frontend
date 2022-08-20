@@ -1,6 +1,7 @@
 import { ethers } from 'ethers';
 import { useEthers, displayEther, shortenAddress } from 'vue-dapp';
 import MinterAbi from "../../abi/Minter.json";
+import TldAbi from "../../abi/PunkTLD.json";
 
 const { address, balance, chainId, signer } = useEthers();
 
@@ -206,7 +207,17 @@ export default {
           commit("setIsMinterAdmin", false);
         }
 
-        //commit("setCanUserBuy", canMint);
+        // check if user has any admin privileges
+        const tldIntfc = new ethers.utils.Interface(TldAbi);
+        const tldContract = new ethers.Contract(rootGetters["tld/getTldAddress"], tldIntfc, signer.value);
+
+        const tldAdmin = await tldContract.owner();
+
+        if (tldAdmin === address.value) {
+          commit("setIsTldAdmin", true);
+        } else {
+          commit("setIsTldAdmin", false);
+        }
       }
     },
 

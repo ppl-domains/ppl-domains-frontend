@@ -4,8 +4,65 @@
   
   <div class="row mt-3">
     <div class="col-md-8 offset-md-2">
-      <p>About your top-level domain.</p>
+      <p>
+        A People Domain (.PPL) is a Top Level Domain name (TLD) acting as an extension to your name or to the name of your organization/company/community/group/etc. 
+      </p>
 
+      <h3>
+      Examples: 
+      </h3>
+
+      <p>
+      <em>names/last names/countries/regions/languages/ethnicities/social groups/</em>
+      </p>
+
+      <ul>
+        <li>julia.ppl</li>
+        <li>johnson.ppl</li>
+        <li>korea.ppl</li>
+        <li>french.ppl</li>
+        <li>black.ppl</li>
+        <li>hispanic.ppl</li>
+        <li>humanrights.ppl</li>
+        <li>womenrights.ppl</li>
+      </ul>
+
+      <p>
+      <em>regions/cities/communities/neighbourhoods/online communities/</em>
+      </p>
+
+      <ul>
+        <li>catalonia.ppl</li>
+        <li>newyork.ppl</li>
+        <li>christian.ppl</li>
+        <li>hindu.ppl</li>
+        <li>downtown.ppl</li>
+        <li>ethereum.ppl</li>
+        <li>bitcoin.ppl</li>
+        <li>craigslist.ppl</li>
+        <li>tiktok.ppl</li>
+        <li>onlinechess.ppl</li>
+      </ul>
+
+      <h3>
+      What can be done with a People Domain?
+      </h3>
+
+      <p>
+      With a collaboration with <a target="_blank" href="https://punk.domains">Punk Domains</a>, an avant-garde permissionless web3 domain provider on Ethereum Layer-2 protocols such as Arbitrum and Optimism, a .PPL domain can be used as a digital identity on web3, your username on dApps etc., instead of using your hard-to-remember ethereum address. 
+      </p>
+      
+      <p>
+      Plus it can function as a community belonging identity. Imagine having the address "julia.catalonia.ppl" as your web3 address. (<em>Subdomains are not enabled yet, but will be in the future.</em>)
+      </p>
+
+      <h3>
+      Who can create/mint a People domain?
+      </h3>
+
+      <p>
+      Anybody who owns NFTs from the Lufroloc DISH collections can mint People Domains. Click "Get Dishes NFTs" at the top of this website to get one if you don't have one. You need at least 1 NFT from each collection to be eligible to mint People Domains.
+      </p>
 
       <h3>Useful links</h3>
 
