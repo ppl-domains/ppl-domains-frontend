@@ -61,7 +61,7 @@
       </h3>
 
       <p>
-      Anybody who owns NFTs from the Lufroloc DISH collections can mint People Domains. Click "Get Dishes NFTs" at the top of this website to get one if you don't have one. You need at least 1 NFT from each collection to be eligible to mint People Domains.
+      Anyone can mint a .ppl domain!
       </p>
 
       <h3>Useful links</h3>

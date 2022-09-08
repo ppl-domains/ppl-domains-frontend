@@ -15,7 +15,7 @@ export default {
     tldContract: null,
     tldChainId: 42161,
     tldChainName: "Arbitrum",
-    minterAddress: "0x64427BE4497E473ce0f529Ec07C91cc5CDB1ffc4", // TODO
+    minterAddress: "0x3f6Ba1E9f76CAa569dA19ec45DB72Bb6430E45A3", // TODO
     minterContract: null,
     minterPaused: true,
     minterTldPrice1: 1.0,

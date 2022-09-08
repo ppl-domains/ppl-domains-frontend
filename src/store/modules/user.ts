@@ -9,12 +9,12 @@ export default {
   namespaced: true,
   
   state: () => ({ 
-    canUserBuy: false,
+    canUserBuy: true, // set to true, because anyone can mint a domain now (before only NFT holders were eligible)
     discountEligible: false,
     isTldAdmin: false,
     isMinterAdmin: false,
     isRoyaltyFeeUpdater: false,
-    nftAddress: "0xe9A1a323b4c8FD5Ce6842edaa0cd8af943cBdf22",
+    nftAddress: "", // not relevant for this specific case
     selectedName: null, // domain name that appears as the main profile name
     selectedNameData: null,
     selectedNameImageSvg: null,
@@ -289,12 +289,15 @@ export default {
     async fetchCanUserBuy({ commit, rootGetters }) {
       if (address.value) {
         // fetch if user can buy a domain
+        /*
         const minterIntfc = new ethers.utils.Interface(MinterAbi);
         const minterContract = new ethers.Contract(rootGetters["tld/getMinterAddress"], minterIntfc, signer.value);
 
         const canMint = await minterContract.canUserMint(address.value);
+        */
 
-        commit("setCanUserBuy", canMint);
+        //commit("setCanUserBuy", canMint);
+        commit("setCanUserBuy", true); // minting now open to everyone
       }
     },
 
