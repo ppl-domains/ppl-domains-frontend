@@ -48,7 +48,8 @@ export default function useChainHelpers() {
       } else if (networkId === 10) {
         // Optimism
         urls = [
-          "https://mainnet.optimism.io"
+          "https://1rpc.io/op",
+          "https://rpc.ankr.com/optimism"
         ]; 
       } else if (networkId === 100) {
         // Gnosis Chain
@@ -124,7 +125,7 @@ export default function useChainHelpers() {
         chainId: "0xA",
         chainName: "Optimism",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
-        rpcUrls: ["https://mainnet.optimism.io"]
+        rpcUrls: ["https://1rpc.io/op", "https://rpc.ankr.com/optimism"]
       }] 
     } else if (networkName == "Optimism Testnet") {
       method = "wallet_addEthereumChain"
