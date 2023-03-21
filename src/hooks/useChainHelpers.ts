@@ -36,14 +36,12 @@ export default function useChainHelpers() {
       if (networkId === 137) {
         // Polygon PoS Chain
         urls = [
-          "https://polygon-rpc.com/" 
-          //"https://polygon-mainnet.g.alchemy.com/v2/" + import.meta.env.VITE_ALCHEMY_POLYGON_KEY
+          "https://polygon-rpc.com/"
         ];
       } else if (networkId === 80001) {
         // Mumbai testnet (Polygon testnet)
         urls = [
-          "https://matic-mumbai.chainstacklabs.com",
-          "https://polygon-mumbai.g.alchemy.com/v2/" + import.meta.env.VITE_ALCHEMY_MUMBAI_KEY
+          "https://matic-mumbai.chainstacklabs.com"
         ]
       } else if (networkId === 10) {
         // Optimism
@@ -59,8 +57,7 @@ export default function useChainHelpers() {
       } else if (networkId === 42161) {
         // Arbitrum
         urls = [
-          "https://arb1.arbitrum.io/rpc",
-          "https://arb-mainnet.g.alchemy.com/v2/" + import.meta.env.VITE_ALCHEMY_ARBITRUM_KEY,
+          "https://rpc.ankr.com/arbitrum"
         ];
       } else if (networkId === 421611) {
         // Arbitrum testnet
